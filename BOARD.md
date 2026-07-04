@@ -39,3 +39,13 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Creazione del package `infrastructure.persistence.entity`.
   * Creazione di `OrderJpaEntity` e `OrderLineJpaEntity` con le corrette relazioni Hibernate (`@OneToMany`).
   * Creazione di `OrderRepository` (Spring Data JPA).
+
+### 🟡 5. [FEATURE] Implementazione MapStruct e Application Service
+* **Stato:** 🟡 IN PROGRESS
+* **Branch:** `feature/mapper-e-service`
+* **Descrizione:** Integrazione di MapStruct per la traduzione tra Dominio e Infrastruttura e creazione dell'Application Service per orchestrare la creazione dell'ordine.
+* **Criteri di Accettazione:**
+  * Configurazione corretta di MapStruct nel `pom.xml`.
+  * Creazione dell'interfaccia `OrderMapper` (`@Mapper(componentModel = "spring")`).
+  * Creazione di `OrderApplicationService` e relativa implementazione.
+  * Implementazione del metodo `createOrder(UUID customerId)` con flusso completo (Istanziazione Dominio -> Mapping -> Salvataggio Repository).
