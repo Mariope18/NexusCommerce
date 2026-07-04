@@ -40,12 +40,13 @@ public class Order {
     }
 
     public BigDecimal calcoloTotalAmount() {
-        return this.totalAmount = this.orderLines.stream()
+        this.totalAmount = this.orderLines.stream()
                 .map(line -> {
                     BigDecimal p = line.getPrice() != null ? line.getPrice() : BigDecimal.ZERO;
                     long q = line.getQuantity() != null ? line.getQuantity() : 0L;
                     return p.multiply(BigDecimal.valueOf(q));
                 })
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
+        return this.totalAmount;
     }
 }

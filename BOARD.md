@@ -17,8 +17,8 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
 
 ---
 
-### 🟡 3. [TEST] Unit Testing del Dominio Core dell'Order Service
-* **Stato:** 🟡 IN PROGRESS
+### 🟢 3. [TEST] Unit Testing del Dominio Core dell'Order Service
+* **Stato:** 🟢 DONE
 * **Branch:** `feature/test-dominio-ordine`
 * **Descrizione:** Scrittura degli unit test con JUnit 5 per blindare la logica di business dell'aggregato Order (stato iniziale, calcolo del totale e resilienza ai valori nulli).
 * **Criteri di Accettazione:**
