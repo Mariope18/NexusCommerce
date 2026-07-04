@@ -30,8 +30,8 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
 
 ## 🗄 Sprint 2: Infrastruttura, Persistenza e API
 
-### 🟡 4. [INFRA] Configurazione Spring Data JPA e PostgreSQL
-* **Stato:** 🟡 IN PROGRESS
+### 🟢 4. [INFRA] Configurazione Spring Data JPA e PostgreSQL
+* **Stato:** 🟢 DONE
 * **Branch:** `feature/configurazione-jpa-postgres`
 * **Descrizione:** Configurazione della connessione a PostgreSQL e creazione delle JPA Entities per mantenere il disaccoppiamento dal modello di dominio puro (Clean Architecture).
 * **Criteri di Accettazione:**
