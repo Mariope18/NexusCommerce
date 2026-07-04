@@ -1,0 +1,19 @@
+# IDEs and Editors
+.idea/
+*.iml
+.vscode/
+
+# Build and Target directories
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs and temp files
+*.log
+tmp/
+
+# OS specific files
+.DS_Store
+Thumbs.db
