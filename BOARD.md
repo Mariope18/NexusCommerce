@@ -26,3 +26,16 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Copertura del calcolo corretto del totale con `BigDecimal`.
   * Verifica della corretta gestione dei casi limite (prezzi o quantità nulle).
   * Esecuzione dei test fluida e priva di dipendenze dal framework Spring.
+
+
+## 🗄 Sprint 2: Infrastruttura, Persistenza e API
+
+### 🟢 4. [INFRA] Configurazione Spring Data JPA e PostgreSQL
+* **Stato:** 🟢 DONE
+* **Branch:** `feature/configurazione-jpa-postgres`
+* **Descrizione:** Configurazione della connessione a PostgreSQL e creazione delle JPA Entities per mantenere il disaccoppiamento dal modello di dominio puro (Clean Architecture).
+* **Criteri di Accettazione:**
+  * File `application.yml` configurato per PostgreSQL.
+  * Creazione del package `infrastructure.persistence.entity`.
+  * Creazione di `OrderJpaEntity` e `OrderLineJpaEntity` con le corrette relazioni Hibernate (`@OneToMany`).
+  * Creazione di `OrderRepository` (Spring Data JPA).
