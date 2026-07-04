@@ -7,8 +7,6 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
 ### 🟢 1. [SETUP] Inizializzazione Repository e Scaffolding
 * **Stato:** 🟢 DONE
 * **Branch:** `main`
-* **Descrizione:** Setup iniziale del monorepo e generazione dello scheletro Spring Boot 3.x tramite Spring Initializr con le dipendenze base (Web, JPA, Postgres, Lombok, Validation).
-* **Documentazione:** Aggiunto file `README.md` iniziale con la visione dei Bounded Context.
 
 ---
 
@@ -16,9 +14,15 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
 * **Stato:** 🟢 DONE
 * **Branch:** `feature/init-progetto-e-dominio`
 * **Descrizione:** Creazione del modello di dominio puro per l'Order Service secondo i principi del Domain-Driven Design (DDD) e della Clean Architecture.
+
+---
+
+### 🟢 3. [TEST] Unit Testing del Dominio Core dell'Order Service
+* **Stato:** 🟢 DONE
+* **Branch:** `feature/test-dominio-ordine`
+* **Descrizione:** Scrittura degli unit test con JUnit 5 per blindare la logica di business dell'aggregato Order (stato iniziale, calcolo del totale e resilienza ai valori nulli).
 * **Criteri di Accettazione:**
-  * Creazione del package `com.nexuscommerce.order.domain`.
-  * Definizione di `OrderStatus` (Enum: `PENDING`, `COMPLETED`, `CANCELLED`).
-  * Definizione di `OrderLine` (Classe pura Java con tipi solidi: `Long` per l'id e `BigDecimal` per il prezzo).
-  * Definizione di `Order` (Aggregate Root con logica di ricalcolo del totale protetta e incapsulata).
-  * Protezione dello stato tramite l'uso combinato di `@NoArgsConstructor(access = AccessLevel.PROTECTED)` e `@Builder` sul costruttore dedicato.
+  * Creazione di `OrderTest.java` nel package di test appropriato.
+  * Copertura del calcolo corretto del totale con `BigDecimal`.
+  * Verifica della corretta gestione dei casi limite (prezzi o quantità nulle).
+  * Esecuzione dei test fluida e priva di dipendenze dal framework Spring.
