@@ -40,8 +40,8 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Creazione di `OrderJpaEntity` e `OrderLineJpaEntity` con le corrette relazioni Hibernate (`@OneToMany`).
   * Creazione di `OrderRepository` (Spring Data JPA).
 
-### 🟡 5. [FEATURE] Implementazione MapStruct e Application Service
-* **Stato:** 🟡 IN PROGRESS
+### 🟢 5. [FEATURE] Implementazione MapStruct e Application Service
+* **Stato:** 🟢 DONE
 * **Branch:** `feature/mapper-e-service`
 * **Descrizione:** Integrazione di MapStruct per la traduzione tra Dominio e Infrastruttura e creazione dell'Application Service per orchestrare la creazione dell'ordine.
 * **Criteri di Accettazione:**
