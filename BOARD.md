@@ -59,3 +59,14 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Definizione dei DTO dedicati all'input e all'output delle API (es. `OrderCreationRequest`).
   * Introduzione della validazione dei dati in ingresso tramite Jakarta Bean Validation (`@NotNull`, ecc.).
   * Implementazione di `OrderController` con mappatura dell'endpoint `POST /api/v1/orders`.
+
+## 🚀 Sprint 3: Evoluzione delle API e Gestione dell'Aggregato
+
+### 🟢 7. [API] Endpoint REST per l'aggiunta di una linea d'ordine
+* **Stato:** 🟢 DONE
+* **Branch:** `feature/api-aggiunta-linea-ordine`
+* **Descrizione:** Esposizione dell'endpoint per aggiungere prodotti a un ordine esistente, implementando il flusso completo di recupero, modifica tramite Dominio puro e persistenza.
+* **Criteri di Accettazione:**
+  * Creazione del DTO `OrderLineRequest` con validazione Jakarta.
+  * Mappatura dell'endpoint `POST /api/v1/orders/{orderId}/lines`.
+  * Implementazione del flusso nell'Application Service: `findById` -> Mapping to Domain -> `aggiungiOrderLine()` -> Mapping to Entity -> `save`.
