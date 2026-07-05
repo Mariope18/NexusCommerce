@@ -49,3 +49,13 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Creazione dell'interfaccia `OrderMapper` (`@Mapper(componentModel = "spring")`).
   * Creazione di `OrderApplicationService` e relativa implementazione.
   * Implementazione del metodo `createOrder(UUID customerId)` con flusso completo (Istanziazione Dominio -> Mapping -> Salvataggio Repository).
+
+### 🟢 6. [API] Esposizione dell'End-point REST per la Creazione Ordine (DTO Layer)
+* **Stato:** 🟢 DONE
+* **Branch:** `feature/api-creazione-ordine`
+* **Descrizione:** Creazione del livello web (Controller e DTO) per esporre l'endpoint HTTP POST che permetterà ai client esterni (frontend o altri microservizi) di richiedere la creazione di un ordine.
+* **Criteri di Accettazione:**
+  * Creazione del package `com.nexuscommerce.order.infrastructure.rest`.
+  * Definizione dei DTO dedicati all'input e all'output delle API (es. `OrderCreationRequest`).
+  * Introduzione della validazione dei dati in ingresso tramite Jakarta Bean Validation (`@NotNull`, ecc.).
+  * Implementazione di `OrderController` con mappatura dell'endpoint `POST /api/v1/orders`.

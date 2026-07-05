@@ -17,7 +17,6 @@ class OrderTest {
         Order order = Order.builder()
                 .id(orderId)
                 .customerId(customerId)
-                .orderStatus(OrderStatus.PENDING)
                 .build();
 
         assertEquals(orderId, order.getId());
@@ -33,7 +32,6 @@ class OrderTest {
         Order order = Order.builder()
                 .id(UUID.randomUUID())
                 .customerId(UUID.randomUUID())
-                .orderStatus(OrderStatus.PENDING)
                 .build();
 
         OrderLine line1 = OrderLine.builder()
@@ -62,7 +60,6 @@ class OrderTest {
         Order order = Order.builder()
                 .id(UUID.randomUUID())
                 .customerId(UUID.randomUUID())
-                .orderStatus(OrderStatus.PENDING)
                 .build();
 
         OrderLine lineWithNullPrice = OrderLine.builder()
