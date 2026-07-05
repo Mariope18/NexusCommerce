@@ -62,8 +62,8 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
 
 ## 🚀 Sprint 3: Evoluzione delle API e Gestione dell'Aggregato
 
-### 🟡 7. [API] Endpoint REST per l'aggiunta di una linea d'ordine
-* **Stato:** 🟡 IN PROGRESS
+### 🟢 7. [API] Endpoint REST per l'aggiunta di una linea d'ordine
+* **Stato:** 🟢 DONE
 * **Branch:** `feature/api-aggiunta-linea-ordine`
 * **Descrizione:** Esposizione dell'endpoint per aggiungere prodotti a un ordine esistente, implementando il flusso completo di recupero, modifica tramite Dominio puro e persistenza.
 * **Criteri di Accettazione:**
