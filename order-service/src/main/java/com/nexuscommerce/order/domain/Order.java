@@ -27,7 +27,7 @@ public class Order {
     private BigDecimal totalAmount = BigDecimal.ZERO;
 
     @Builder
-    private Order(UUID id, UUID customerId, OrderStatus orderStatus) {
+    private Order(UUID id, UUID customerId) {
         this.id = id;
         this.customerId = customerId;
         this.orderStatus = OrderStatus.PENDING;
