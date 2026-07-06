@@ -23,4 +23,13 @@ public class OrderLineJpaEntity {
     private BigDecimal price;
 
     private Long quantity;
+
+    /**
+     * Lato "owning" della relazione bidirezionale.
+     * È questo campo che Hibernate usa per generare la colonna FK "order_id"
+     * nella tabella order_lines, eliminando gli UPDATE extra.
+     */
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_id", nullable = false)
+    private OrderJpaEntity order;
 }
