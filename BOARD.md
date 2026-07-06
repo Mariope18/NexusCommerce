@@ -84,8 +84,8 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
 
 ## 🛡️ Sprint 4: Refactoring, Qualità e Sicurezza
 
-### 🟡 9. [REFACTOR] Hardening del Dominio e Ottimizzazione JPA
-* **Stato:** 🟡 IN PROGRESS
+### 🟢 9. [REFACTOR] Hardening del Dominio e Ottimizzazione JPA
+* **Stato:** 🟢 DONE
 * **Branch:** `chore/code-quality-improvements`
 * **Descrizione:** Applicazione di best practice avanzate per il Domain-Driven Design, ottimizzazione delle relazioni Hibernate e pulizia delle configurazioni.
 * **Criteri di Accettazione:**

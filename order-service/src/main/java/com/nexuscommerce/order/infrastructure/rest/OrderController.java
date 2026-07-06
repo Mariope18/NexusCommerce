@@ -26,8 +26,8 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<UUID> createOrder(@Valid @RequestBody OrderCreationRequest request) {
-        UUID customerId = orderApplicationService.createOrder(request.customerId());
-        return ResponseEntity.status(HttpStatus.CREATED).body(customerId);
+        UUID orderId = orderApplicationService.createOrder(request.customerId());
+        return ResponseEntity.status(HttpStatus.CREATED).body(orderId);
     }
 
     @PostMapping("{orderId}/lines")
