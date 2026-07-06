@@ -6,9 +6,9 @@ import com.nexuscommerce.order.application.service.OrderApplicationService;
 import com.nexuscommerce.order.domain.Order;
 import com.nexuscommerce.order.domain.OrderLine;
 import com.nexuscommerce.order.infrastructure.persistence.entity.OrderJpaEntity;
-import com.nexuscommerce.order.infrastructure.persistence.entity.OrderLineJpaEntity;
 import com.nexuscommerce.order.infrastructure.persistence.repository.OrderRepository;
 import com.nexuscommerce.order.infrastructure.rest.dto.OrderLineRequest;
+import com.nexuscommerce.order.infrastructure.rest.dto.OrderResponse;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -42,17 +42,19 @@ public class OrderApplicationServiceImpl implements OrderApplicationService {
     }
 
     @Override
-    public Order findOrderById(UUID orderId) {
+    public OrderResponse getOrderById(UUID orderId) {
 
         OrderJpaEntity orderEntity = orderRepository.findById(orderId)
                 .orElseThrow(() -> new EntityNotFoundException(String.format("Order con id %s non trovato", orderId)));
 
-        return orderMapper.toDomain(orderEntity);
+        Order order = orderMapper.toDomain(orderEntity);
+
+        return orderMapper.toResponse(order);
     }
 
     @Override
     @Transactional
-    public UUID createOrderLine(UUID orderId, OrderLineRequest request) {
+    public UUID addOrderLine(UUID orderId, OrderLineRequest request) {
 
         OrderJpaEntity orderEntity = orderRepository.findById(orderId)
                 .orElseThrow(() -> new EntityNotFoundException(String.format("Order con id %s non trovato", orderId)));

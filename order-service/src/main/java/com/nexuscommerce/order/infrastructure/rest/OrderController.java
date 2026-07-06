@@ -1,10 +1,9 @@
 package com.nexuscommerce.order.infrastructure.rest;
 
 import com.nexuscommerce.order.application.service.OrderApplicationService;
-import com.nexuscommerce.order.domain.Order;
-import com.nexuscommerce.order.domain.OrderLine;
 import com.nexuscommerce.order.infrastructure.rest.dto.OrderCreationRequest;
 import com.nexuscommerce.order.infrastructure.rest.dto.OrderLineRequest;
+import com.nexuscommerce.order.infrastructure.rest.dto.OrderResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -27,8 +26,13 @@ public class OrderController {
     }
 
     @PostMapping("{orderId}/lines")
-    public ResponseEntity<UUID> createOrderLine(@PathVariable UUID orderId, @Valid @RequestBody OrderLineRequest request) {
+    public ResponseEntity<UUID> addOrderLine(@PathVariable UUID orderId, @Valid @RequestBody OrderLineRequest request) {
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(orderApplicationService.createOrderLine(orderId, request));
+        return ResponseEntity.status(HttpStatus.CREATED).body(orderApplicationService.addOrderLine(orderId, request));
+    }
+
+    @GetMapping("{orderId}")
+    public ResponseEntity<OrderResponse> getOrderById(@PathVariable UUID orderId) {
+        return ResponseEntity.ok(orderApplicationService.getOrderById(orderId));
     }
 }
