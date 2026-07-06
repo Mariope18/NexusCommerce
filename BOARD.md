@@ -72,7 +72,7 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Implementazione del flusso nell'Application Service: `findById` -> Mapping to Domain -> `aggiungiOrderLine()` -> Mapping to Entity -> `save`.
 
 ### 🟡 8. [API] Endpoint REST per il recupero dell'Ordine (GET)
-* **Stato:** 🟡 IN PROGRESS
+* **Stato:** 🟢 DONE
 * **Branch:** `feature/api-recupero-ordine`
 * **Descrizione:** Implementazione dell'endpoint HTTP GET per recuperare i dettagli completi di un ordine, applicando il pattern dei Response DTO.
 * **Criteri di Accettazione:**
