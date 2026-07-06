@@ -10,7 +10,7 @@ import com.nexuscommerce.order.infrastructure.persistence.repository.OrderReposi
 import com.nexuscommerce.order.infrastructure.rest.dto.OrderLineRequest;
 import com.nexuscommerce.order.infrastructure.rest.dto.OrderResponse;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +18,7 @@ import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
+@Transactional(readOnly = true)
 public class OrderApplicationServiceImpl implements OrderApplicationService {
 
     private final OrderMapper orderMapper;
@@ -71,9 +72,7 @@ public class OrderApplicationServiceImpl implements OrderApplicationService {
 
         order.aggiungiOrderLine(orderLine);
 
-        OrderJpaEntity savedOrder = orderMapper.toEntity(order);
-
-        orderRepository.save(savedOrder);
+        orderMapper.updateEntity(order, orderEntity);
 
         return orderLine.getId();
     }
