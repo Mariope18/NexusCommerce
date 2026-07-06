@@ -93,3 +93,12 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Relazioni JPA bidirezionali per evitare query N+1 e update inutili.
   * Profili Spring separati per le configurazioni del database (`application-dev.yaml`).
   * Pulizia POM, import espliciti e test annotati con `@DisplayName`.
+
+### 🟡 10. [API] Gestione Globale delle Eccezioni (Problem Details)
+* **Stato:** 🟡 IN PROGRESS
+* **Branch:** `feature/gestione-globale-eccezioni`
+* **Descrizione:** Centralizzazione della gestione errori tramite `@RestControllerAdvice` e standardizzazione dell'output JSON secondo la RFC 7807.
+* **Criteri di Accettazione:**
+  * Intercettazione di `EntityNotFoundException` (mapping a 404 Not Found).
+  * Intercettazione di eccezioni di dominio (mapping a 400 Bad Request).
+  * Utilizzo nativo dell'oggetto `ProblemDetail` di Spring Boot 3.
