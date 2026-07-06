@@ -80,3 +80,16 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Aggiornamento di `OrderMapper` per la conversione Dominio -> Response DTO.
   * Implementazione del recupero e mapping nell'Application Service.
   * Mappatura dell'endpoint `GET /api/v1/orders/{orderId}` nel Controller con status 200 OK.
+
+
+## 🛡️ Sprint 4: Refactoring, Qualità e Sicurezza
+
+### 🟡 9. [REFACTOR] Hardening del Dominio e Ottimizzazione JPA
+* **Stato:** 🟡 IN PROGRESS
+* **Branch:** `chore/code-quality-improvements`
+* **Descrizione:** Applicazione di best practice avanzate per il Domain-Driven Design, ottimizzazione delle relazioni Hibernate e pulizia delle configurazioni.
+* **Criteri di Accettazione:**
+  * Dominio blindato (rimozione setter pubblici, Value Object immutabili).
+  * Relazioni JPA bidirezionali per evitare query N+1 e update inutili.
+  * Profili Spring separati per le configurazioni del database (`application-dev.yaml`).
+  * Pulizia POM, import espliciti e test annotati con `@DisplayName`.
