@@ -1,0 +1,5 @@
+spring:
+  jpa:
+    hibernate:
+      # SOVRASCRITTURA PER SVILUPPO: in locale fammi l'update automatico delle tabelle
+      ddl-auto: update
