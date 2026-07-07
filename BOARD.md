@@ -103,8 +103,8 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Intercettazione di eccezioni di dominio (mapping a 400 Bad Request).
   * Utilizzo nativo dell'oggetto `ProblemDetail` di Spring Boot 3.
 
-### 🟡 11. [INFRA] Configurazione Ambiente Locale tramite Docker Compose
-* **Stato:** 🟡 IN PROGRESS
+### 🟢 11. [INFRA] Configurazione Ambiente Locale tramite Docker Compose
+* **Stato:** 🟢 DONE
 * **Branch:** `chore/local-docker-environment`
 * **Descrizione:** Creazione del manifesto Docker Compose per automatizzare il provisioning del database PostgreSQL per lo sviluppo locale e i test manuali.
 * **Criteri di Accettazione:**
