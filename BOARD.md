@@ -112,3 +112,15 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Configurazione immagine `postgres:15-alpine` su porta 5432.
   * Allineamento credenziali via environment variables (`POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`).
   * Definizione volume persistente per la cartella data.
+
+
+## 🧪 Sprint 5: Test di Integrazione e Validazione End-to-End
+
+### 🟡 12. [TEST] Test di Integrazione automatizzati con Testcontainers
+* **Stato:** 🟡 IN PROGRESS
+* **Branch:** `feature/integration-tests-testcontainers`
+* **Descrizione:** Implementazione di test di integrazione end-to-end sfruttando Testcontainers per il provisioning dinamico di un database PostgreSQL effimero, garantendo l'affidabilità del layer di persistenza.
+* **Criteri di Accettazione:**
+  * Inserimento delle dipendenze Testcontainers nel `pom.xml`.
+  * Creazione classe astratta di configurazione `AbstractIntegrationTest`.
+  * Creazione `OrderControllerIT` per testare la creazione di un ordine con `MockMvc`.
