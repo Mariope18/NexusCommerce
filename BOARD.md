@@ -102,3 +102,13 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Intercettazione di `EntityNotFoundException` (mapping a 404 Not Found).
   * Intercettazione di eccezioni di dominio (mapping a 400 Bad Request).
   * Utilizzo nativo dell'oggetto `ProblemDetail` di Spring Boot 3.
+
+### 🟢 11. [INFRA] Configurazione Ambiente Locale tramite Docker Compose
+* **Stato:** 🟢 DONE
+* **Branch:** `chore/local-docker-environment`
+* **Descrizione:** Creazione del manifesto Docker Compose per automatizzare il provisioning del database PostgreSQL per lo sviluppo locale e i test manuali.
+* **Criteri di Accettazione:**
+  * Creazione `docker-compose.yml` nella root.
+  * Configurazione immagine `postgres:15-alpine` su porta 5432.
+  * Allineamento credenziali via environment variables (`POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`).
+  * Definizione volume persistente per la cartella data.
