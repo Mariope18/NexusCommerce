@@ -94,8 +94,8 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Profili Spring separati per le configurazioni del database (`application-dev.yaml`).
   * Pulizia POM, import espliciti e test annotati con `@DisplayName`.
 
-### 🟡 10. [API] Gestione Globale delle Eccezioni (Problem Details)
-* **Stato:** 🟡 IN PROGRESS
+### 🟢 10. [API] Gestione Globale delle Eccezioni (Problem Details)
+* **Stato:** 🟢 DONE
 * **Branch:** `feature/gestione-globale-eccezioni`
 * **Descrizione:** Centralizzazione della gestione errori tramite `@RestControllerAdvice` e standardizzazione dell'output JSON secondo la RFC 7807.
 * **Criteri di Accettazione:**
