@@ -124,3 +124,15 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
   * Inserimento delle dipendenze Testcontainers nel `pom.xml`.
   * Creazione classe astratta di configurazione `AbstractIntegrationTest`.
   * Creazione `OrderControllerIT` per testare la creazione di un ordine con `MockMvc`.
+
+
+## 🚀 Sprint 6: Chiusura Ciclo di Vita dell'Ordine
+
+### 🟡 13. [API] Endpoint REST per completamento e cancellazione Ordine
+* **Stato:** 🟡 IN PROGRESS
+* **Branch:** `feature/api-transizioni-stato`
+* **Descrizione:** Esposizione degli endpoint HTTP PATCH per orchestrare i cambi di stato dell'ordine tramite la logica blindata del Dominio.
+* **Criteri di Accettazione:**
+  * Implementazione `completeOrder` e `cancelOrder` nel Service (`@Transactional`).
+  * Mappatura `@PatchMapping("{orderId}/complete")` nel Controller.
+  * Mappatura `@PatchMapping("{orderId}/cancel")` nel Controller.
