@@ -32,13 +32,15 @@ public class Order {
     private BigDecimal totalAmount = BigDecimal.ZERO;
 
     @Builder
-    private Order(UUID id, UUID customerId) {
+    private Order(UUID id, UUID customerId, OrderStatus orderStatus, Set<OrderLine> orderLines, BigDecimal totalAmount) {
         Objects.requireNonNull(id, "L'id dell'ordine non può essere null");
         Objects.requireNonNull(customerId, "Il customerId non può essere null");
 
         this.id = id;
         this.customerId = customerId;
-        this.orderStatus = OrderStatus.PENDING;
+        this.orderStatus = orderStatus != null ? orderStatus : OrderStatus.PENDING;
+        this.orderLines = orderLines != null ? new HashSet<>(orderLines) : new HashSet<>();
+        this.totalAmount = totalAmount != null ? totalAmount : BigDecimal.ZERO;
     }
 
     /**
