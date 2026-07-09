@@ -116,8 +116,8 @@ Questo file traccia il ciclo di vita dei ticket del progetto, simulando una boar
 
 ## 🧪 Sprint 5: Test di Integrazione e Validazione End-to-End
 
-### 🟡 12. [TEST] Test di Integrazione automatizzati con Testcontainers
-* **Stato:** 🟡 IN PROGRESS
+### 🟢 12. [TEST] Test di Integrazione automatizzati con Testcontainers
+* **Stato:** 🟢 DONE
 * **Branch:** `feature/integration-tests-testcontainers`
 * **Descrizione:** Implementazione di test di integrazione end-to-end sfruttando Testcontainers per il provisioning dinamico di un database PostgreSQL effimero, garantendo l'affidabilità del layer di persistenza.
 * **Criteri di Accettazione:**
